@@ -3,14 +3,17 @@ package rmi;
 import model.Cidade;
 import model.Estado;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CidadeManager implements ICidadeManager {
+public class CidadeManager extends UnicastRemoteObject implements ICidadeManager {
 
     private List<Cidade> cidades = new ArrayList<>();
 
-    public CidadeManager() {
+    public CidadeManager() throws RemoteException {
+        super();
         carregarCidade();
     }
 
