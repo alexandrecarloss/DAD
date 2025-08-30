@@ -1,3 +1,5 @@
+package rmi;
+
 import model.Cidade;
 
 import java.rmi.Remote;
