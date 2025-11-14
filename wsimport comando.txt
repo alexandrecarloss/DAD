@@ -1,0 +1,18 @@
+wsimport -keep -verbose -p edu.ifam.daic.dad.wsimportIBGE.soap -d src/main/java http://localhost:8080/ibge?wsdl
+
+
+Parâmetros:
+
+-keep: mantém os arquivos .java gerados.
+
+-verbose: mostra logs detalhados.
+
+-d src: define o diretório de saída dos .class (geralmente src ou build).
+
+-s src: define o diretório para os .java.
+
+-p: define o pacote base (importante para organização).
+
+A URL final é o endpoint WSDL do seu serviço.
+
+comando: & "C:\Users\user\.jdks\corretto-1.8.0_462\bin\wsimport.exe" -keep -p ubs.soap -d wsimportUBS http://localhost:8080/ubs?wsdl
